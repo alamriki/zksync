@@ -3,14 +3,15 @@
 [package]
 name = "zksync-crypto"
 version = "1.0.0"
-edition = "2018"
+edition = "2021" # Updated to the latest edition
+description = "Cryptography components for zksync" # Brief description of the package
 authors = ["The Matter Labs Team <hello@matterlabs.dev>"]
 homepage = "https://zksync.io/"
 repository = "https://github.com/matter-labs/zksync"
 license = "Apache-2.0"
 keywords = ["blockchain", "zksync"]
 categories = ["cryptography"]
-publish = false # This library is not published stand-alone, it is bundled with `zksync.js`.
+publish = false # Not published stand-alone; bundled with `zksync.js`.
 
 [lib]
 crate-type = ["cdylib"]
@@ -20,7 +21,8 @@ default = ["console_error_panic_hook"]
 
 [dependencies]
 franklin_crypto = { package = "franklin-crypto", git = "https://github.com/matter-labs/franklin-crypto.git", branch = "beta" }
-rand = "0.4"
+rand = "0.4" # Consider specifying a more precise version
+
 
 wasm-bindgen = "=0.2.74"
 hex = "0.4"
